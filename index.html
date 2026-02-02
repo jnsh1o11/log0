@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JNSH Services</title>
+
+<!-- ICONS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+}
+header img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid white;
+    object-fit: cover;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+.container {
+    max-width: 420px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* BUTTONS */
+.btn {
+    width: 100%;
+    padding: 15px;
+    border-radius: 14px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.main-btn { background: #2563eb; }
+.sub-btn { background: #0ea5e9; }
+
+/* SOCIAL */
+.tg { background: linear-gradient(135deg,#2aabee,#229ed9); }
+.ig { background: linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045); }
+.phone { background: linear-gradient(135deg,#22c55e,#16a34a); }
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+/* SECTIONS */
+.section {
+    display: none;
+}
+
+.section.active {
+    display: block;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.back {
+    background: #e5e7eb;
+    color: #111;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <div>
+<header>
+    <img src="rasmlar/myphoto.jpg.jpg" alt="Jaloliddin">
+    <h1>Jaloliddin</h1>
+    <p>HTML & CSS asosida professional web freelancer</p>
+</header>
+</div>
+
+    <!-- MAIN MENU -->
+    <div id="main" class="section active">
+        <h2 class="title">Bo‘limni tanlang</h2>
+        <div class="wrapper">
+            <button class="btn main-btn" onclick="openSection('services')">Xizmatlar</button>
+            <button class="btn main-btn" onclick="openSection('logos')">Logolar</button>
+            <button class="btn main-btn" onclick="openSection('contact')">Aloqa</button>
+            <button class="btn main-btn" onclick="openSection('ABOUT')">Men haqimda</button>
+        </div>
+    </div>
+
+    <!-- SERVICES -->
+    <div id="services" class="section">
+        <h2 class="title">Xizmatlar</h2>
+        <div class="wrapper">
+            <button class="btn sub-btn" onclick="openSection('request')">Logo yaratish</button>
+            <button class="btn sub-btn" onclick="openSection('request')">Web dasturlash</button>
+            <button class="btn sub-btn" onclick="openSection('request')">Sayt yaratish</button>
+            <button class="btn back" onclick="openSection('main')">⬅ Orqaga</button>
+        </div>
+    </div>
+    <!-- ABOUT -->
+    <div id="ABOUT" class="section">
+        <h2 class="title">Men haqimda</h2>
+        <div class="container">
+            <div class="card">
+                <p><em>Salom mening ismim Jaloliddin. Men logo dizayn bilan shug'ullanaman. Minimal, zamonaviy va sifatli logotiplar tayyorlayman. Undan tashqari kichik website ham tayyorlab berishim mumkin.</em></p>
+        </div>
+        <div class="wrapper">
+            <button class="btn back" onclick="openSection('main')">⬅ Orqaga</button>
+        </div>
+</div>
+    </div>
+
+
+    <!-- LOGOS -->
+    <div id="logos" class="section">
+        <h2 class="title">Logolar</h2>
+        <div class="wrapper">
+            <button class="btn sub-btn" onclick="openSection('request')">Murojaat</button>
+            <button class="btn back" onclick="openSection('main')">⬅ Orqaga</button>
+        </div>
+    </div>
+    
+
+    <!-- CONTACT -->
+    <div id="contact" class="section">
+        <h2 class="title">Aloqa</h2>
+        <div class="wrapper">
+            <a href="https://t.me/jnsh_logo1" class="btn tg">
+                <i class="fa-brands fa-telegram"></i> Telegram
+            </a>
+
+            <a href="https://www.instagram.com/jnsh1o11/?hl=ru" class="btn ig">
+                <i class="fa-brands fa-instagram"></i> Instagram
+            </a>
+
+            <a href="tel:+998979626699" class="btn phone">
+                <i class="fa-solid fa-phone"></i> Telefon qilish
+            </a>
+
+            <button class="btn back" onclick="openSection('main')">⬅ Orqaga</button>
+        </div>
+    </div>
+
+    <!-- REQUEST -->
+    <div id="request" class="section">
+        <h2 class="title">Murojaat</h2>
+        <div class="wrapper">
+            <a href="https://t.me/jnsh_logo1" class="btn tg">
+                <i class="fa-brands fa-telegram"></i> Telegram
+            </a>
+
+            <a href="https://www.instagram.com/jnsh1o11/?hl=ru" class="btn ig">
+                <i class="fa-brands fa-instagram"></i> Instagram
+            </a>
+
+            <a href="tel:+998979626699" class="btn phone">
+                <i class="fa-solid fa-phone"></i> Telefon qilish
+            </a>
+
+            <button class="btn back" onclick="openSection('main')">⬅ Bosh sahifa</button>
+        </div>
+    </div>
+
+</div>
+
+<script>
+function openSection(id) {
+    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+}
+</script>
+
+</body>
+</html>
